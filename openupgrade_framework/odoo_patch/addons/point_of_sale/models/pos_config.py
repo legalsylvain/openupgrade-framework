@@ -1,7 +1,9 @@
+from odoo import api
 from odoo.addons.point_of_sale.models.pos_config import PosConfig
 
 if True:
 
+    @api.model
     def post_install_pos_localisation(self, companies=False):
         # <OpenUpgrade:REMOVE>
         # don't try to setup_defaults, because it will fail

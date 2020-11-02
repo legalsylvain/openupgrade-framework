@@ -16,4 +16,5 @@ def _pre_init_mrp(cr):
     pass
     # </OpenUpgrade>
 
+
 mrp._pre_init_mrp = _pre_init_mrp
