@@ -1,0 +1,11 @@
+---Models in module 'test_mail'---
+obsolete model mail.test
+obsolete model mail.test.full
+obsolete model test_performance.mail
+new model mail.performance.thread
+new model mail.performance.tracking
+new model mail.test.container
+new model mail.test.ticket
+new model mail.test.track.compute
+---Fields in module 'test_mail'---
+---XML records in module 'test_mail'---

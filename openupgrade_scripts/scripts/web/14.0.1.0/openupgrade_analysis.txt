@@ -1,0 +1,4 @@
+---Models in module 'web'---
+model base.document.layout (moved from base) [transient]
+---Fields in module 'web'---
+---XML records in module 'web'---

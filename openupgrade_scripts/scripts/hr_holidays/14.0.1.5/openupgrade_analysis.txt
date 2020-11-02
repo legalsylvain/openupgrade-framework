@@ -1,0 +1,4 @@
+---Models in module 'hr_holidays'---
+model hr.leave.report.calendar (moved from hr_holidays_calendar) [sql_view]
+---Fields in module 'hr_holidays'---
+---XML records in module 'hr_holidays'---

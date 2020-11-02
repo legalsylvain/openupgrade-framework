@@ -1,0 +1,4 @@
+---Models in module 'website_blog'---
+---Fields in module 'website_blog'---
+---XML records in module 'website_blog'---
+---nothing has changed in this module--

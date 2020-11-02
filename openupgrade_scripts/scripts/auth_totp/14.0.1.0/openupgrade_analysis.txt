@@ -1,0 +1,4 @@
+---Models in module 'auth_totp'---
+new model auth_totp.wizard [transient]
+---Fields in module 'auth_totp'---
+---XML records in module 'auth_totp'---

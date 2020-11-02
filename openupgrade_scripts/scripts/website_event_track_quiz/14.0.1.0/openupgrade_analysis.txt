@@ -1,0 +1,6 @@
+---Models in module 'website_event_track_quiz'---
+new model event.quiz
+new model event.quiz.answer
+new model event.quiz.question
+---Fields in module 'website_event_track_quiz'---
+---XML records in module 'website_event_track_quiz'---

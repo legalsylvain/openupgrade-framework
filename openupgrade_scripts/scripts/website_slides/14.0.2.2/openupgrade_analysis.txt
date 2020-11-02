@@ -1,0 +1,4 @@
+---Models in module 'website_slides'---
+new model slide.slide.resource
+---Fields in module 'website_slides'---
+---XML records in module 'website_slides'---

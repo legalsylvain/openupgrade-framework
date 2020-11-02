@@ -1,0 +1,4 @@
+---Models in module 'microsoft_account'---
+new model microsoft.service [abstract]
+---Fields in module 'microsoft_account'---
+---XML records in module 'microsoft_account'---

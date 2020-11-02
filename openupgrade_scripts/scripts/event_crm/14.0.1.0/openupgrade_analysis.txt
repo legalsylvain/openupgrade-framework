@@ -1,0 +1,4 @@
+---Models in module 'event_crm'---
+new model event.lead.rule
+---Fields in module 'event_crm'---
+---XML records in module 'event_crm'---

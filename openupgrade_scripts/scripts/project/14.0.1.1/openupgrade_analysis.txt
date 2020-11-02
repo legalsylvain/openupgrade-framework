@@ -1,0 +1,6 @@
+---Models in module 'project'---
+new model project.delete.wizard [transient]
+new model project.task.recurrence
+new model project.task.type.delete.wizard [transient]
+---Fields in module 'project'---
+---XML records in module 'project'---

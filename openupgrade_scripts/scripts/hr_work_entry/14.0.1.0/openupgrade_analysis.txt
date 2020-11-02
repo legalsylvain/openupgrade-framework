@@ -1,0 +1,4 @@
+---Models in module 'hr_work_entry'---
+---Fields in module 'hr_work_entry'---
+---XML records in module 'hr_work_entry'---
+---nothing has changed in this module--

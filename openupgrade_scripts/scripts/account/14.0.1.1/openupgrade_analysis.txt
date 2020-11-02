@@ -1,0 +1,19 @@
+---Models in module 'account'---
+obsolete model account.accrual.accounting.wizard [transient]
+obsolete model account.fiscal.year
+obsolete model account.reconciliation.widget [abstract]
+obsolete model report.account.report_agedpartnerbalance [abstract]
+model account.analytic.default (moved from account_analytic_default)
+new model account.automatic.entry.wizard [transient]
+new model account.group.template
+new model account.reconcile.model.line
+new model account.reconcile.model.line.template
+new model account.reconcile.model.partner.mapping
+new model account.resequence.wizard [transient]
+new model account.tax.report
+new model account.tour.upload.bill [transient]
+new model account.tour.upload.bill.email.confirm [transient]
+new model report.account.report_invoice [abstract]
+new model sequence.mixin [abstract]
+---Fields in module 'account'---
+---XML records in module 'account'---

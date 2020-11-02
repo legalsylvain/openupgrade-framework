@@ -1,0 +1,4 @@
+---Models in module 'sales_team'---
+new model crm.tag
+---Fields in module 'sales_team'---
+---XML records in module 'sales_team'---

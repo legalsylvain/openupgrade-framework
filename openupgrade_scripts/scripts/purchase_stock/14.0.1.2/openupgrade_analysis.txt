@@ -1,0 +1,4 @@
+---Models in module 'purchase_stock'---
+new model vendor.delay.report [sql_view]
+---Fields in module 'purchase_stock'---
+---XML records in module 'purchase_stock'---

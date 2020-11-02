@@ -1,0 +1,4 @@
+---Models in module 'hr_contract'---
+new model hr.payroll.structure.type
+---Fields in module 'hr_contract'---
+---XML records in module 'hr_contract'---

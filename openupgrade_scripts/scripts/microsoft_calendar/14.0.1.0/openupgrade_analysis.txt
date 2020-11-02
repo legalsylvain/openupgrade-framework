@@ -1,0 +1,5 @@
+---Models in module 'microsoft_calendar'---
+new model microsoft.calendar.account.reset [transient]
+new model microsoft.calendar.sync [abstract]
+---Fields in module 'microsoft_calendar'---
+---XML records in module 'microsoft_calendar'---

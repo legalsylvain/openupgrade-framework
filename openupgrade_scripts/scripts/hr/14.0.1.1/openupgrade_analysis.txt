@@ -1,0 +1,4 @@
+---Models in module 'hr'---
+---Fields in module 'hr'---
+---XML records in module 'hr'---
+---nothing has changed in this module--

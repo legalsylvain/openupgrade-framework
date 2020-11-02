@@ -1,0 +1,9 @@
+---Models in module 'coupon'---
+new model coupon.coupon
+new model coupon.generate.wizard [transient]
+new model coupon.program
+new model coupon.reward
+new model coupon.rule
+new model report.coupon.report_coupon [abstract]
+---Fields in module 'coupon'---
+---XML records in module 'coupon'---

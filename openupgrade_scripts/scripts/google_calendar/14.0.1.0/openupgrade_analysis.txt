@@ -1,0 +1,6 @@
+---Models in module 'google_calendar'---
+obsolete model google.calendar [abstract]
+new model google.calendar.account.reset [transient]
+new model google.calendar.sync [abstract]
+---Fields in module 'google_calendar'---
+---XML records in module 'google_calendar'---

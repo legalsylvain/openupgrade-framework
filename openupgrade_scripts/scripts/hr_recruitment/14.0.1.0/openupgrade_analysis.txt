@@ -1,0 +1,5 @@
+---Models in module 'hr_recruitment'---
+new model applicant.get.refuse.reason [transient]
+new model hr.applicant.refuse.reason
+---Fields in module 'hr_recruitment'---
+---XML records in module 'hr_recruitment'---

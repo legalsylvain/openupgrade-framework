@@ -1,0 +1,6 @@
+---Models in module 'fleet'---
+obsolete model fleet.vehicle.cost
+obsolete model fleet.vehicle.log.fuel
+new model fleet.vehicle.cost.report [sql_view]
+---Fields in module 'fleet'---
+---XML records in module 'fleet'---

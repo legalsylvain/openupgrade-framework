@@ -1,0 +1,4 @@
+---Models in module 'l10n_ch'---
+new model report.l10n_ch.qr_report_main [abstract]
+---Fields in module 'l10n_ch'---
+---XML records in module 'l10n_ch'---

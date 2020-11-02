@@ -1,0 +1,9 @@
+---Models in module 'base'---
+model base.document.layout (moved to web) [transient]
+new model ir.qweb.field.image_url [abstract]
+new model res.users.apikeys [sql_view]
+new model res.users.apikeys.description [transient]
+new model res.users.apikeys.show [abstract]
+new model res.users.identitycheck [transient]
+---Fields in module 'base'---
+---XML records in module 'base'---

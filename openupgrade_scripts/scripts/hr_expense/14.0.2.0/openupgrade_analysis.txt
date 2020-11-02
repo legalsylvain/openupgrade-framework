@@ -1,0 +1,4 @@
+---Models in module 'hr_expense'---
+obsolete model hr.expense.sheet.register.payment.wizard [transient]
+---Fields in module 'hr_expense'---
+---XML records in module 'hr_expense'---

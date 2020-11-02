@@ -1,0 +1,10 @@
+---Models in module 'stock'---
+obsolete model stock.overprocessed.transfer [transient]
+obsolete model stock.picking.responsible [transient]
+new model report.stock.report_product_product_replenishment [abstract]
+new model report.stock.report_product_template_replenishment [abstract]
+new model stock.backorder.confirmation.line [transient]
+new model stock.immediate.transfer.line [transient]
+new model stock.orderpoint.snooze [transient]
+---Fields in module 'stock'---
+---XML records in module 'stock'---

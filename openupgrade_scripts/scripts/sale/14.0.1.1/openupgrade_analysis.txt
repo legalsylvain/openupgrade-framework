@@ -1,0 +1,5 @@
+---Models in module 'sale'---
+model product.attribute.custom.value (moved to product)
+new model sale.order.cancel [transient]
+---Fields in module 'sale'---
+---XML records in module 'sale'---
