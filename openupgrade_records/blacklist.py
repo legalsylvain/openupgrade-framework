@@ -7,4 +7,6 @@ BLACKLIST_MODULES = [
     "hw_posbox_homepage",
     # Modules that seems bugged
     "l10n_bo",
+    # Doesn't have sense to analyse this module that contains patches
+    "openupgrade_framework",
 ]

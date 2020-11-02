@@ -3,8 +3,8 @@
 from . import graph
 
 # A lot of changes in the core functions.
-# adapted to V14. to be tested
-from . import loading
+# broken. TO BE FIXED.
+# from . import loading
 
 # Adapted to V14
 from . import migration
