@@ -272,4 +272,5 @@ def load_module_graph(cr, graph, status=None, perform_checks=True,
 
     return loaded_modules, processed_modules
 
+
 loading.load_module_graph = load_module_graph

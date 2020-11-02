@@ -5,4 +5,6 @@ BLACKLIST_MODULES = [
     "hw_drivers",
     "hw_escpos",
     "hw_posbox_homepage",
+    # Modules that seems bugged
+    "l10n_bo",
 ]

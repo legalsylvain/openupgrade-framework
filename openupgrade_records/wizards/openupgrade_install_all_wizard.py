@@ -19,20 +19,7 @@ class OpenupgradeInstallAllWizard(models.TransientModel):
     to_install = fields.Integer("Number of modules to install", readonly=True)
 
     @api.model
-    def default_get(self, fields):
-        """Update module list and retrieve the number
-        of installable modules"""
-        res = super().default_get(fields)
-        update, add = self.env["ir.module.module"].update_list()
-        modules = self.env["ir.module.module"].search(
-            [("state", "not in", ["uninstallable", "unknown"])]
-        )
-        res["to_install"] = len(modules)
-        return res
-
-    def install_all(self, extra_domain=None):
-        """Main wizard step. Set all installable modules to install
-        and actually install them. Exclude testing modules."""
+    def _domain_to_install(self, extra_domain=None):
         domain = [
             "&",
             "&",
@@ -42,6 +29,24 @@ class OpenupgradeInstallAllWizard(models.TransientModel):
         ]
         if extra_domain:
             domain = AND([domain, extra_domain])
+        return domain
+
+    @api.model
+    def default_get(self, fields):
+        """Update module list and retrieve the number
+        of installable modules"""
+        res = super().default_get(fields)
+        update, add = self.env["ir.module.module"].update_list()
+        modules = self.env["ir.module.module"].search(
+            self._domain_to_install(),
+        )
+        res["to_install"] = len(modules)
+        return res
+
+    def install_all(self, extra_domain=None):
+        """Main wizard step. Set all installable modules to install
+        and actually install them. Exclude testing modules."""
+        domain = self._domain_to_install(extra_domain=extra_domain)
         modules = self.env["ir.module.module"].search(domain)
         if modules:
             modules.write({"state": "to install"})

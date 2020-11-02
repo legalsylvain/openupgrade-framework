@@ -3,7 +3,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "OpenUpgrade Scripts",
-    "summary": """TODO WRITE ME.""",
+    "summary": """Migration script for Odoo Core modules
+    to migrate from 13.0 to 14.0 versions.""",
     "version": "14.0.1.0.0",
     "category": "Migration",
     "author": "Odoo Community Association (OCA), GRAP",

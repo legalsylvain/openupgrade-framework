@@ -49,11 +49,11 @@ def preload_registries(dbnames):
                     for module_name in module_names:
                         result = loader.run_suite(loader.make_suite(module_name, 'post_install'), module_name)
                         registry._assertion_report.update(result)
-                    # <OpenUpgrade:ADD:DISABLED>
-                    # # run deferred unit tests
-                    # for module_name, prefix in registry.openupgrade_test_prefixes:
-                    #     result = run_unit_tests(module_name, position='post_install', openupgrade_prefix=prefix)
-                    #     registry._assertion_report.record_result(result)
+                    # <OpenUpgrade:ADD>
+                    # run deferred unit tests
+                    for module_name, prefix in registry.openupgrade_test_prefixes:
+                        result = run_unit_tests(module_name, position='post_install', openupgrade_prefix=prefix)
+                        registry._assertion_report.record_result(result)
                     # </OpenUpgrade>
                 _logger.info("%d post-tests in %.2fs, %s queries",
                              registry._assertion_report.testsRun - tests_before,

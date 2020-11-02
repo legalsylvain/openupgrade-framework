@@ -1,4 +1,3 @@
-
 .. code-block:: shell
 
     pip install odoorpc==0.7.0

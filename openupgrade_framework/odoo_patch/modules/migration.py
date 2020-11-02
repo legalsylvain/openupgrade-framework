@@ -31,8 +31,8 @@ if True:
         # to decide if we want to do something if a new module is installed
         # during the migration.
         if not (hasattr(pkg, 'update') or state in ('to upgrade', 'to install')):
-            return
         # </OpenUpgrade>
+            return
 
         def convert_version(version):
             if version.count('.') >= 2:
