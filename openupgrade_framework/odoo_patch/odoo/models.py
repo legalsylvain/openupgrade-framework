@@ -1,6 +1,7 @@
 # flake8: noqa
 # pylint: skip-file
 
+import odoo
 import psycopg2
 from odoo import _
 from odoo.models import fix_import_export_id_paths, BaseModel, _logger
