@@ -1,4 +1,0 @@
----Models in module 'point_of_sale'---
----Fields in module 'point_of_sale'---
----XML records in module 'point_of_sale'---
----nothing has changed in this module--

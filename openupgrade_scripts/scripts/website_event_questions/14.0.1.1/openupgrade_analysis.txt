@@ -1,6 +1,0 @@
----Models in module 'website_event_questions'---
-obsolete model event.answer
-obsolete model event.question.report [sql_view]
-new model event.question.answer
----Fields in module 'website_event_questions'---
----XML records in module 'website_event_questions'---

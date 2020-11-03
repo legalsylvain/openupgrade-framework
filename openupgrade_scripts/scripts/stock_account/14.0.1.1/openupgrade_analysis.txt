@@ -1,5 +1,0 @@
----Models in module 'stock_account'---
-obsolete model stock.change.standard.price [transient]
-new model stock.valuation.layer.revaluation [transient]
----Fields in module 'stock_account'---
----XML records in module 'stock_account'---

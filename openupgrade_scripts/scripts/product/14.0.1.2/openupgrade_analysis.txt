@@ -1,5 +1,0 @@
----Models in module 'product'---
-obsolete model product.price_list [transient]
-model product.attribute.custom.value (moved from sale)
----Fields in module 'product'---
----XML records in module 'product'---

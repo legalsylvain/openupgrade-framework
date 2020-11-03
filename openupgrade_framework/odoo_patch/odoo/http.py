@@ -6,7 +6,7 @@ from odoo.service import security
 from odoo.http import SessionExpiredException, request, OpenERPSession
 
 if True:
-    def check_security(self):
+    def _check_security(self):
         """
         Check the current authentication parameters to know if those are still
         valid. This method should be called at each request. If the
@@ -29,4 +29,4 @@ if True:
             raise SessionExpiredException("Session expired")
 
 
-OpenERPSession.check_security = check_security
+OpenERPSession.check_security = _check_security

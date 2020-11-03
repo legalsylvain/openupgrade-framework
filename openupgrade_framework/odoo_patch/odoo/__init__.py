@@ -1,6 +1,6 @@
 from . import modules
-from . import tools
 from . import service
+from . import tools
 
 # Nothing todo the function, the function check_security didn't changed
 from . import http

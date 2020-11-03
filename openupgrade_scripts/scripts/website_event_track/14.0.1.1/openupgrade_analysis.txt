@@ -1,6 +1,0 @@
----Models in module 'website_event_track'---
-model website.event.menu (moved to website_event)
-new model event.track.tag.category
-new model event.track.visitor
----Fields in module 'website_event_track'---
----XML records in module 'website_event_track'---

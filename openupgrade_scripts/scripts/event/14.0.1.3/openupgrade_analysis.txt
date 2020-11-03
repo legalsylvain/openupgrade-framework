@@ -1,9 +1,0 @@
----Models in module 'event'---
-obsolete model event.confirm [transient]
-model event.event.ticket (moved from event_sale)
-new model event.stage
-new model event.tag
-new model event.tag.category
-new model event.type.ticket
----Fields in module 'event'---
----XML records in module 'event'---

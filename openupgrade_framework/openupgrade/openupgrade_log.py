@@ -1,8 +1,7 @@
+# coding: utf-8
 # Copyright 2011-2015 Therp BV <https://therp.nl>
 # Copyright 2016 Opener B.V. <https://opener.am>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
-# flake8: noqa: C901
 
 from openupgradelib.openupgrade_tools import table_exists
 
@@ -37,29 +36,25 @@ def log_xml_id(cr, module, xml_id):
     :param module: The module that contains the xml_id
     :param xml_id: the xml_id, with or without 'module.' prefix
     """
-    if not table_exists(cr, "openupgrade_record"):
+    if not table_exists(cr, 'openupgrade_record'):
         return
-    if "." not in xml_id:
-        xml_id = "{}.{}".format(module, xml_id)
+    if '.' not in xml_id:
+        xml_id = '%s.%s' % (module, xml_id)
     cr.execute(
-        "SELECT model FROM ir_model_data " "WHERE module = %s AND name = %s",
-        xml_id.split("."),
-    )
+        "SELECT model FROM ir_model_data "
+        "WHERE module = %s AND name = %s",
+        xml_id.split('.'))
     record = cr.fetchone()
     if not record:
-        # legalsylvain: disabled, due to pylint error
-        # do we have to log ?
-        # print("Cannot find xml_id %s" % xml_id)
+        print("Cannot find xml_id %s" % xml_id)
         return
     else:
         cr.execute(
             "SELECT id FROM openupgrade_record "
             "WHERE module=%s AND model=%s AND name=%s AND type=%s",
-            (module, record[0], xml_id, "xmlid"),
-        )
+            (module, record[0], xml_id, 'xmlid'))
         if not cr.fetchone():
             cr.execute(
                 "INSERT INTO openupgrade_record "
                 "(module, model, name, type) values(%s, %s, %s, %s)",
-                (module, record[0], xml_id, "xmlid"),
-            )
+                (module, record[0], xml_id, 'xmlid'))

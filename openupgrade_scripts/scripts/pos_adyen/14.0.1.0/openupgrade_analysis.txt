@@ -1,5 +1,0 @@
----Models in module 'pos_adyen'---
-new model adyen.store
-new model adyen.terminal
----Fields in module 'pos_adyen'---
----XML records in module 'pos_adyen'---

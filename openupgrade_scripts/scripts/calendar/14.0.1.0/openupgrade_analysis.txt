@@ -1,4 +1,0 @@
----Models in module 'calendar'---
-new model calendar.recurrence
----Fields in module 'calendar'---
----XML records in module 'calendar'---

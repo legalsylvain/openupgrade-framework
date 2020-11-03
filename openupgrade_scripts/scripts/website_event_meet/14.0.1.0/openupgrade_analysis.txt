@@ -1,4 +1,0 @@
----Models in module 'website_event_meet'---
-new model event.meeting.room
----Fields in module 'website_event_meet'---
----XML records in module 'website_event_meet'---

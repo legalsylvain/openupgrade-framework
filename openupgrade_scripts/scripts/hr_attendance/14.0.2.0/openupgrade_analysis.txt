@@ -1,4 +1,0 @@
----Models in module 'hr_attendance'---
----Fields in module 'hr_attendance'---
----XML records in module 'hr_attendance'---
----nothing has changed in this module--

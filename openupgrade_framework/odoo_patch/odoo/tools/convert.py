@@ -7,7 +7,7 @@ from odoo.tools.convert import xml_import
 
 if True:
 
-    def _test_xml_id(self, xml_id):
+    def __test_xml_id(self, xml_id):
         if '.' in xml_id:
             module, id = xml_id.split('.', 1)
             assert '.' not in id, """The ID reference "%s" must contain
@@ -20,4 +20,4 @@ form: module.record_id""" % (xml_id,)
         # OpenUpgrade: log entry of XML imports
         openupgrade_log.log_xml_id(self.env.cr, self.module, xml_id)
 
-xml_import._test_xml_id = _test_xml_id
+xml_import._test_xml_id = __test_xml_id

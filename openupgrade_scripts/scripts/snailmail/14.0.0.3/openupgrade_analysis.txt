@@ -1,4 +1,0 @@
----Models in module 'snailmail'---
-new model snailmail.confirm [abstract]
----Fields in module 'snailmail'---
----XML records in module 'snailmail'---

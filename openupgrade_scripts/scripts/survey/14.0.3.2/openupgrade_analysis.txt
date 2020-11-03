@@ -1,7 +1,0 @@
----Models in module 'survey'---
-obsolete model survey.label
-obsolete model survey.user_input_line
-new model survey.question.answer
-new model survey.user_input.line
----Fields in module 'survey'---
----XML records in module 'survey'---

@@ -1,4 +1,0 @@
----Models in module 'website_event'---
-model website.event.menu (moved from website_event_track)
----Fields in module 'website_event'---
----XML records in module 'website_event'---

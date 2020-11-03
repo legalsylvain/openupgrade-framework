@@ -1,5 +1,0 @@
----Models in module 'website_jitsi'---
-new model chat.room
-new model chat.room.mixin [abstract]
----Fields in module 'website_jitsi'---
----XML records in module 'website_jitsi'---

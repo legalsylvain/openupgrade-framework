@@ -15,7 +15,7 @@ _logger = logging.getLogger(__name__)
 
 
 if True:
-    def migrate_module(self, pkg, stage):
+    def _migrate_module(self, pkg, stage):
         assert stage in ('pre', 'post', 'end')
         stageformat = {
             'pre': '[>%s]',
@@ -115,4 +115,4 @@ if True:
                         if mod:
                             del mod
 
-migration.migrate_module = migrate_module
+migration.migrate_module = _migrate_module

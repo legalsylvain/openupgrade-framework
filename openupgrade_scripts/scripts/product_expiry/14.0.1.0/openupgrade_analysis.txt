@@ -1,4 +1,0 @@
----Models in module 'product_expiry'---
-new model expiry.picking.confirmation [transient]
----Fields in module 'product_expiry'---
----XML records in module 'product_expiry'---

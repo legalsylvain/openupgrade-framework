@@ -1,4 +1,0 @@
----Models in module 'note'---
----Fields in module 'note'---
----XML records in module 'note'---
----nothing has changed in this module--

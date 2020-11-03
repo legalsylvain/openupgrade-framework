@@ -10,7 +10,8 @@ from openupgradelib.openupgrade_tools import table_exists
 
 from odoo import release
 from odoo.modules.module import get_module_path
-from odoo.tools import config, safe_eval
+from odoo.tools.safe_eval import safe_eval
+from odoo.tools.config import config
 
 # A collection of functions used in
 # odoo/modules/loading.py

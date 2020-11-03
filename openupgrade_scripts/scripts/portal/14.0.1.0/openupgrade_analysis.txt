@@ -1,4 +1,0 @@
----Models in module 'portal'---
----Fields in module 'portal'---
----XML records in module 'portal'---
----nothing has changed in this module--

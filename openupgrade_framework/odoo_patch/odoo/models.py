@@ -9,7 +9,7 @@ from odoo.addons.openupgrade_framework.openupgrade import openupgrade_log
 
 
 if True:
-    def load(self, fields, data):
+    def _load(self, fields, data):
         """
         Attempts to load the data matrix, and returns a list of ids (or
         ``False`` if there was an error and no id could be generated) and a
@@ -176,4 +176,4 @@ if True:
             'nextrow': nextrow,
         }
 
-BaseModel.load = load
+BaseModel.load = _load

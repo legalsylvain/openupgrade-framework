@@ -1,6 +1,0 @@
----Models in module 'crm'---
-obsolete model crm.lead.tag
-obsolete model crm.partner.binding [transient]
-new model crm.recurring.plan
----Fields in module 'crm'---
----XML records in module 'crm'---

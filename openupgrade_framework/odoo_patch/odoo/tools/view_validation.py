@@ -7,7 +7,7 @@ from odoo.tools import view_validation
 from odoo.tools.view_validation import _validators, _logger
 
 
-def valid_view(arch, **kwargs):
+def _valid_view(arch, **kwargs):
     for pred in _validators[arch.tag]:
         # <OpenUpgrade:CHANGE>
         # Do not raise blocking error, because it's normal to
@@ -26,4 +26,4 @@ def valid_view(arch, **kwargs):
     return True
 
 
-view_validation.valid_view = valid_view
+view_validation.valid_view = _valid_view

@@ -1,4 +1,0 @@
----Models in module 'repair'---
-obsolete model repair.cancel [transient]
----Fields in module 'repair'---
----XML records in module 'repair'---

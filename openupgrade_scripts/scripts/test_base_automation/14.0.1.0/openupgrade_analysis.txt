@@ -1,7 +1,0 @@
----Models in module 'test_base_automation'---
-model base.automation.lead.test (moved from base_automation)
-model base.automation.line.test (moved from base_automation)
-new model base.automation.link.test
-new model base.automation.linked.test
----Fields in module 'test_base_automation'---
----XML records in module 'test_base_automation'---

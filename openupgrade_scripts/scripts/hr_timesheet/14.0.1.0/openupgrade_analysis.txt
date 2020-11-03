@@ -1,4 +1,0 @@
----Models in module 'hr_timesheet'---
-new model project.task.create.timesheet [transient]
----Fields in module 'hr_timesheet'---
----XML records in module 'hr_timesheet'---

@@ -1,4 +1,0 @@
----Models in module 'resource'---
----Fields in module 'resource'---
----XML records in module 'resource'---
----nothing has changed in this module--

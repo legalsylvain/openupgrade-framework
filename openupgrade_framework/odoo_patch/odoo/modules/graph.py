@@ -13,7 +13,7 @@ _logger = logging.getLogger(__name__)
 
 if True:
 
-    def update_from_db(self, cr):
+    def _update_from_db(self, cr):
         if not len(self):
             return
         # update the graph with values from the database (if exist)
@@ -43,7 +43,7 @@ if True:
                 setattr(package, k, v)
 
 
-    def add_modules(self, cr, module_list, force=None):
+    def _add_modules(self, cr, module_list, force=None):
         if force is None:
             force = []
         packages = []
@@ -104,5 +104,5 @@ if True:
         return len(self) - len_graph
 
 
-Graph.update_from_db = update_from_db
-Graph.add_modules = add_modules
+Graph.update_from_db = _update_from_db
+Graph.add_modules = _add_modules

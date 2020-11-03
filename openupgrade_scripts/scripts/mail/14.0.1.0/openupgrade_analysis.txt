@@ -1,8 +1,0 @@
----Models in module 'mail'---
-obsolete model email_template.preview [transient]
-obsolete model mail.address.mixin [abstract]
-new model mail.blacklist.remove [transient]
-new model mail.render.mixin [abstract]
-new model mail.template.preview [transient]
----Fields in module 'mail'---
----XML records in module 'mail'---

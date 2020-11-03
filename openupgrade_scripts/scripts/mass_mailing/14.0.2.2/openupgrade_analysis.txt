@@ -1,4 +1,0 @@
----Models in module 'mass_mailing'---
----Fields in module 'mass_mailing'---
----XML records in module 'mass_mailing'---
----nothing has changed in this module--

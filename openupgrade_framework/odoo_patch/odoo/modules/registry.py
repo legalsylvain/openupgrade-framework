@@ -11,7 +11,7 @@ from odoo.modules import registry
 
 if True:
 
-    def init(self, db_name):
+    def _init(self, db_name):
         self.models = {}    # model name/model instance mapping
         self._sql_constraints = set()
         self._init = True
@@ -55,4 +55,4 @@ if True:
         with closing(self.cursor()) as cr:
             self.has_unaccent = odoo.modules.db.has_unaccent(cr)
 
-registry.init = init
+registry.init = _init

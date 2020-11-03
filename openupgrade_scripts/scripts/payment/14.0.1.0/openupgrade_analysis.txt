@@ -1,4 +1,0 @@
----Models in module 'payment'---
----Fields in module 'payment'---
----XML records in module 'payment'---
----nothing has changed in this module--

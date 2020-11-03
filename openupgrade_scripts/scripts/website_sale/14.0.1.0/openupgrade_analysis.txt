@@ -1,6 +1,0 @@
----Models in module 'website_sale'---
-obsolete model product.style
-new model product.ribbon
-new model website.sale.extra.field
----Fields in module 'website_sale'---
----XML records in module 'website_sale'---

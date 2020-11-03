@@ -1,6 +1,7 @@
 # flake8: noqa
 # pylint: skip-file
 
+import itertools
 import logging
 import sys
 import time
@@ -9,9 +10,9 @@ import odoo
 import odoo.tools as tools
 from odoo import api, SUPERUSER_ID
 from odoo.modules import loading
-from odoo.modules.module import adapt_version, load_openerp_module
+from odoo.modules.module import adapt_version, load_openerp_module, initialize_sys_path
 
-from odoo.modules.loading import load_data, load_demo
+from odoo.modules.loading import load_data, load_demo, _check_module_names
 from odoo.addons.openupgrade_framework.openupgrade import openupgrade_loading
 
 import os
@@ -20,7 +21,7 @@ _logger = logging.getLogger(__name__)
 _test_logger = logging.getLogger('odoo.tests')
 
 
-def load_module_graph(cr, graph, status=None, perform_checks=True,
+def _load_module_graph(cr, graph, status=None, perform_checks=True,
                       skip_modules=None, report=None, models_to_check=None, upg_registry=None):
     # <OpenUpgrade:CHANGED-SIGNATURE/>
     """Migrates+Updates or Installs all module nodes from ``graph``
@@ -274,7 +275,7 @@ def load_module_graph(cr, graph, status=None, perform_checks=True,
     return loaded_modules, processed_modules
 
 
-def load_marked_modules(cr, graph, states, force, progressdict, report,
+def _load_marked_modules(cr, graph, states, force, progressdict, report,
                         loaded_modules, perform_checks, models_to_check=None, upg_registry=None):
     # <OpenUpgrade:CHANGED-SIGNATURE/>
     """Loads modules marked with ``states``, adding them to ``graph`` and
@@ -296,7 +297,7 @@ def load_marked_modules(cr, graph, states, force, progressdict, report,
         _logger.debug('Updating graph with %d more modules', len(module_list))
         # <OpenUpgrade:CHANGE>
         # add upg_registry
-        loaded, processed = load_module_graph(
+        loaded, processed = _load_module_graph(
             cr, graph, progressdict, report=report, skip_modules=loaded_modules,
             perform_checks=perform_checks, models_to_check=models_to_check,
             upg_registry=upg_registry,
@@ -309,7 +310,7 @@ def load_marked_modules(cr, graph, states, force, progressdict, report,
     return processed_modules
 
 
-def load_modules(db, force_demo=False, status=None, update_module=False):
+def _load_modules(db, force_demo=False, status=None, update_module=False):
     initialize_sys_path()
 
     force = []
@@ -353,7 +354,7 @@ def load_modules(db, force_demo=False, status=None, update_module=False):
         report = registry._assertion_report
         # <OpenUpgrade:CHANGE>
         # add upg_registry
-        loaded_modules, processed_modules = load_module_graph(
+        loaded_modules, processed_modules = _load_module_graph(
             cr, graph, status, perform_checks=update_module,
             report=report, models_to_check=models_to_check, upg_registry=upg_registry)
 
@@ -424,14 +425,14 @@ def load_modules(db, force_demo=False, status=None, update_module=False):
             previously_processed = len(processed_modules)
             # <OpenUpgrade:CHANGE>
             # add upg_registry
-            processed_modules += load_marked_modules(cr, graph,
+            processed_modules += _load_marked_modules(cr, graph,
                 ['installed', 'to upgrade', 'to remove'],
                 force, status, report, loaded_modules, update_module, models_to_check, upg_registry)
             # </OpenUpgrade>
             if update_module:
                 # <OpenUpgrade:CHANGE>
                 # add upg_registry
-                processed_modules += load_marked_modules(cr, graph,
+                processed_modules += _load_marked_modules(cr, graph,
                     ['to install'], force, status, report,
                     loaded_modules, update_module, models_to_check, upg_registry)
                 # </OpenUpgrade>
@@ -549,7 +550,7 @@ def load_modules(db, force_demo=False, status=None, update_module=False):
         # STEP 9: save installed/updated modules for post-install tests
         registry.updated_modules += processed_modules
 
-
-loading.load_module_graph = load_module_graph
-loading.load_marked_modules = load_marked_modules
-loading.load_modules = load_modules
+loading.load_module_graph = _load_module_graph
+loading.load_marked_modules = _load_marked_modules
+loading.load_modules = _load_modules
+odoo.modules.load_modules = _load_modules
